@@ -6,7 +6,7 @@ A sleek, responsive, and interactive personal portfolio website built with pure 
 
 ## 🌐 Live Preview
 
-> Open `https://my-portfolio-three-mu-32.vercel.app/` directly in any browser — no server required.
+> Open `https://monish27portfolio.vercel.app/` directly in any browser — no server required.
 
 ---
 
