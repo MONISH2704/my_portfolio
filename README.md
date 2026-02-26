@@ -6,7 +6,7 @@ A sleek, responsive, and interactive personal portfolio website built with pure 
 
 ## 🌐 Live Preview
 
-> Open `monish-portfolio.html` directly in any browser — no server required.
+> Open `https://my-portfolio-three-mu-32.vercel.app/` directly in any browser — no server required.
 
 ---
 
@@ -66,76 +66,9 @@ A sleek, responsive, and interactive personal portfolio website built with pure 
 - **Auto-resets** chat history every time it's closed — fresh start each session
 - Fully responsive on all screen sizes
 
----
-
-## 🗂️ Project Structure
-
-```
-monish-portfolio.html   ← Single self-contained HTML file
-README.md               ← This file
-```
 
 > Everything — HTML, CSS, JavaScript, and the embedded photo — is contained in a **single HTML file**. No external dependencies required except Google Fonts (loaded via CDN).
 
----
-
-## 🛠️ Tech Stack
-
-| Technology | Usage |
-|---|---|
-| HTML5 | Structure and content |
-| CSS3 | Styling, animations, responsive layout |
-| Vanilla JavaScript | Interactivity, chatbot, scroll effects |
-| Google Fonts | Sora + Share Tech Mono typefaces |
-| IntersectionObserver API | Scroll-triggered animations |
-| CSS Animations | Keyframe effects, transitions |
-
----
-
-## 📱 Responsive Breakpoints
-
-| Screen | Behavior |
-|---|---|
-| Desktop (>768px) | Full layout with photo, horizontal nav |
-| Tablet (768px) | Hamburger menu, adjusted padding |
-| Mobile (480px) | Full-width chatbot, stacked layout, hidden photo |
-
----
-
-## 🔗 Links Featured
-
-| Platform | URL |
-|---|---|
-| LinkedIn | [monish-gowda-m-438bb3232](https://www.linkedin.com/in/monish-gowda-m-438bb3232/) |
-| GitHub | [MONISH2704](https://github.com/MONISH2704) |
-| Email | monishgowda27@gmail.com |
-| Phone | +91 9008874062 |
-
----
-
-## 🚀 Getting Started
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/MONISH2704/portfolio.git
-   ```
-
-2. **Open in browser**
-   ```bash
-   # Simply open the file
-   open monish-portfolio.html
-   # or double-click the file in your file explorer
-   ```
-
-No build step. No npm install. No server needed. Just open and go.
-
----
-
-## 🙏 Credits
-
-- Fonts: [Google Fonts](https://fonts.google.com/) — Sora & Share Tech Mono
-- Designed & developed with ❤️ for **Monish Gowda M**
-- Bengaluru, Karnataka, India 🇮🇳
 
 ---
 
