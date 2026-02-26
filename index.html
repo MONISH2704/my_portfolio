@@ -223,7 +223,9 @@
     overflow: hidden;
   }
   #chatbot-window.open { display: flex; animation: slideUp 0.3s ease; }
+  #chatbot-window.closing { display: flex; animation: slideDown 0.3s ease forwards; }
   @keyframes slideUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes slideDown { from{opacity:1;transform:translateY(0)} to{opacity:0;transform:translateY(20px)} }
   #chat-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.2rem; background: linear-gradient(135deg, #0a1929, #0d2137); border-bottom: 1px solid var(--border); flex-shrink: 0; }
   .chat-header-info { display: flex; align-items: center; gap: 0.8rem; }
   .chat-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--cyan), var(--blue)); display: flex; align-items: center; justify-content: center; font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; color: var(--bg); font-weight: 700; box-shadow: 0 0 10px rgba(0,229,255,0.3); flex-shrink: 0; }
@@ -492,7 +494,11 @@
     var isOpen = win.classList.contains("open");
     if (isOpen) {
       win.classList.remove("open");
-      resetChat();
+      win.classList.add("closing");
+      setTimeout(function() {
+        win.classList.remove("closing");
+        resetChat();
+      }, 300);
     } else {
       win.classList.add("open");
       document.getElementById("chat-input").focus();
@@ -608,10 +614,15 @@
 
   // SCROLL ANIMATIONS
   var revealObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      } else {
+        e.target.classList.remove('visible');
+      }
+    });
   }, { threshold: 0.12 });
   document.querySelectorAll('.tl-item, .project-card, .skill-group, .edu-card, .cert-badge').forEach(function(el, i) {
-    el.style.transitionDelay = (i % 4) * 0.1 + 's';
     revealObserver.observe(el);
   });
 
